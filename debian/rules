@@ -1,4 +1,32 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+export DEB_LDFLAGS_MAINT_APPEND =
+
+# allow deprecated declarations to avoid FTBFS in test
+export DEB_CFLAGS_MAINT_APPEND = -Wno-error=deprecated-declarations
+
+include /usr/share/dpkg/default.mk
 
 %:
 	dh $@
+
+# For PACKAGE_VERSION, see https://bugs.debian.org/994123
+override_dh_auto_configure:
+	dh_auto_configure -- PYTHON=/usr/bin/python3 PACKAGE_VERSION=$(DEB_VERSION_UPSTREAM)
+
+execute_after_dh_auto_install:
+	# Remove __pycache__ directories
+	-find debian/ -type d -name "__pycache__" -exec rm -rf "{}"  \;
+
+# We disable tests since they requires the presence of non-free lyrics
+override_dh_auto_test:

@@ -1,0 +1,2 @@
+# Using system intltool files, considered as safe
+osdlyrics source: wayward-symbolic-link-target-in-source po/Makefile.in.in

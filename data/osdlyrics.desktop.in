@@ -1,0 +1,12 @@
+[Desktop Entry]
+Exec=osdlyrics
+Version=1.0
+_Name=OSD Lyrics
+_GenericName=Lyrics Show
+_Comment=Download and show lyrics for your favorite media player
+Icon=osdlyrics
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GTK;AudioVideo;Audio;Player;X-Ximian-Main;X-Novell-Main;X-Red-Hat-Base;
+X-Ubuntu-Gettext-Domain=osdlyrics

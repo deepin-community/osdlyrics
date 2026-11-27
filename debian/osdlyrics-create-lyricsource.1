@@ -1,0 +1,51 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2019 Boyuan Yang <byang@debian.org>
+.\"
+.TH "OSDLYRICS" "1" "2019-05-01"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+osdlyrics-create-lyricsource \- Helper script to create OSD Lyrics lyric source project
+.SH SYNOPSIS
+.B osdlyrics
+.SH DESCRIPTION
+This manual page documents briefly the
+.B osdlyrics-create-lyricsource
+command as provided by
+.B osdlyrics
+package.
+.PP
+\fBosdlyrics-create-lyricsource\fP is a helper script that assists developers to
+rapidly create projects for custom lyric source provider as a plugin for OSD
+Lyrics. End users should not need to run this script.
+.PP
+The script can only run in terminal and does not accept any arguments. It will
+operate interactively to collect necessary information.
+Please follow the instructions displayed on the screen.
+The result project will be generated under current working directory.
+.SH SEE ALSO
+.PP
+.BR osdlyrics (1),
+.BR osdlyrics-daemon (1)
+.
+.PP
+Upstream project homepage:
+<\fBhttps://github.com/osdlyrics/osdlyrics\fR>.
+.
+.SH AUTHOR
+.PP
+This manual page is written by
+.MT byang@\:debian.org
+Boyuan Yang
+.ME
+for the Debian Project (but may be used by others).

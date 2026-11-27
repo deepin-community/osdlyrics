@@ -1,0 +1,18 @@
+# List of source files which contain translatable strings.
+src/ol_menu.c
+src/ol_main.c
+src/ol_trayicon.c
+src/ol_option.c
+src/ol_lyric_candidate_list.c
+src/ol_search_dialog.c
+src/ol_notify.c
+src/ol_player_chooser.c
+src/ol_app_info.c
+src/ol_scroll_window.c
+data/dialogs.glade
+data/osdlyrics.desktop.in
+lyricsources/megalobiz/megalobiz.py
+lyricsources/netease/netease.py
+lyricsources/netease_tr/netease_tr.py
+lyricsources/xiami/xiami.py
+lyricsources/subtitles4songs/subtitles4songs.py

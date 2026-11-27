@@ -1,0 +1,2 @@
+* Continue with copyright review in src/.
+* Remove all embedded lyrics and generate a DFSG package. Tests need to be disabled as well.

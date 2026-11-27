@@ -1,0 +1,25 @@
+From: Boyuan Yang <byang@debian.org>
+Date: Wed, 16 Jun 2021 16:00:15 -0400
+Subject: configure.ac: Buildable with gettext 0.21
+
+---
+ configure.ac | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 0bcd0a4..1d5672e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -130,11 +130,8 @@ GETTEXT_PACKAGE=osdlyrics
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
+ IT_PROG_INTLTOOL([0.35.0])
++AM_GNU_GETTEXT_REQUIRE_VERSION([0.21])
+ AM_GNU_GETTEXT([external])
+-AM_GNU_GETTEXT_VERSION([0.19])
+-m4_ifdef([AM_GNU_GETTEXT_REQUIRE_VERSION],
+-         [AM_GNU_GETTEXT_REQUIRE_VERSION([0.19])]
+-)
+ 
+ # Checks for header files.
+ AC_CHECK_HEADERS([stdlib.h string.h])
