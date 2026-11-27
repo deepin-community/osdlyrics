@@ -1,0 +1,4 @@
+version=4
+opts="dversionmangle=s/\+dfsg\d*$//,filenamemangle=s%(?:.*?)?v?@ANY_VERSION@(@ARCHIVE_EXT@)%@PACKAGE@-$1$2%" \
+ https://github.com/osdlyrics/osdlyrics/tags \
+ (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@

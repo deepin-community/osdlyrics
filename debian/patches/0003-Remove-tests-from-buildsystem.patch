@@ -1,0 +1,33 @@
+From: Boyuan Yang <byang@debian.org>
+Date: Sun, 21 Apr 2019 14:50:48 -0400
+Subject: Remove tests from buildsystem
+
+---
+ configure.ac    | 1 -
+ src/Makefile.am | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 3eb55da..0bcd0a4 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -147,7 +147,6 @@ AC_CONFIG_FILES([
+         po/Makefile.in
+         Makefile
+         src/Makefile
+-        src/tests/Makefile
+         data/Makefile
+         daemon/Makefile
+         python/__init__.py
+diff --git a/src/Makefile.am b/src/Makefile.am
+index dbe3b61..c7112e7 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -129,7 +129,6 @@ osdlyrics_SOURCES = \
+ 
+ # Librarys
+ 
+-SUBDIRS = tests
+ 
+ localedir = $(datadir)/locale
+ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
